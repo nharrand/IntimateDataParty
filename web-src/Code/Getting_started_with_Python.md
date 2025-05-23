@@ -71,6 +71,9 @@ df
 
 If you run all your block, Jupyter should print a table containing your data.
 
+
+## Plotting temperature over time
+
 To plot the evolution of temperature over time, you can run the following code block:
 
 ```
@@ -96,6 +99,8 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 ```
+
+## Plotting locations
 
 To display your datapoints on a map you can run the following:
 
