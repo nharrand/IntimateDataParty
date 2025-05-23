@@ -465,13 +465,11 @@
       <nav id="menu">
 	      <ul>
 <li><a class="" href="../index.html">index</a></li>
-<li class="heading"><span>Python</span></li>
+<li class="heading"><span>Code</span></li>
 <ul>
-<li><a class="active" href="Python.html">Python</a></li>
-</ul>
-<li class="heading"><span>R</span></li>
-<ul>
-<li><a class="" href="../R/R.html">R</a></li>
+<li><a class="" href="Getting_started_with_Plotly.html">Getting started with Plotly</a></li>
+<li><a class="active" href="Getting_started_with_Python.html">Getting started with Python</a></li>
+<li><a class="" href="Getting_started_with_R.html">Getting started with R</a></li>
 </ul>
 </ul>
       </nav>
@@ -488,15 +486,77 @@
 <p>You can now install Jupyter, a python notebook that will allow you to quickly work with your data.</p>
 <pre><code>pip install jupyterlab
 </code></pre>
-<p>You should also install Matplotlib and Pandas (two libraries we’ll be using).</p>
-<pre><code>pip install pandas matplotlib
+<p>You should also install Matplotlib, Pandas and folium (three libraries we’ll be using).</p>
+<pre><code>pip install pandas matplotlib folium
 </code></pre>
 <p>To start Jupyter, simply run:</p>
 <pre><code>jupyter lab
 </code></pre>
-<p>This command will give you a link to your local instance of jupyter. (This should look like a url starting with ‘<a href="https://localhost">https://localhost</a>’.)</p>
+<p>This command will give you a link to your local instance of Jupyter. (This should look like a url starting with ‘<a href="https://localhost">https://localhost</a>’.)</p>
 <h2 id="loading-your-data">Loading your data <a class="heading-anchor-permalink" href="#loading-your-data">#</a></h2>
-<p>Check <a href="../../code/CSV_Temp_Geo.ipynb">this notebook as an example</a>.</p>
+<p>In the rest of this tutorial, we are going to develop a very simple example to illustrate how to work with a simple dataset. You can find this toy dataset <a href="../../samples/temperature_readings.csv" download>here</a>.</p>
+<p>This csv file contains temperature recordings with date and location data.</p>
+<p>First create a code block that import the libraries you want to work with:</p>
+<pre><code>import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.colors as mcolors
+import folium
+from folium.plugins import HeatMap
+from datetime import datetime
+</code></pre>
+<p>Then create a code block that loads your data. (You need to change the path to correspond to your csv file’s path.)</p>
+<pre><code># Load CSV into a dataframe df
+df = pd.read_csv('data/temperature_readings.csv', parse_dates=['date'])
+</code></pre>
+<p>To check your dataframe, you can simply create the following block:</p>
+<pre><code>df
+</code></pre>
+<p>If you run all your block, Jupyter should print a table containing your data.</p>
+<p>To plot the evolution of temperature over time, you can run the following code block:</p>
+<pre><code># Normalize temperature for colormap
+norm = mcolors.Normalize(vmin=df['temperature'].min(), vmax=df['temperature'].max())
+cmap = plt.get_cmap('coolwarm')
+
+# Function to convert normalized color to hex
+def temperature_to_hex(temp):
+    rgba = cmap(norm(temp))
+    return mcolors.to_hex(rgba)
+
+# Plot 1: Temperature over time
+plt.figure(figsize=(12, 5))
+colors = [temperature_to_hex(t) for t in df['temperature']]
+plt.scatter(df['date'], df['temperature'], color=colors)
+plt.plot(df['date'], df['temperature'], color='gray', alpha=0.3)
+plt.title('Temperature Over Time')
+plt.xlabel('Date')
+plt.ylabel('Temperature (°C)')
+plt.grid(True)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p>To display your datapoints on a map you can run the following:</p>
+<pre><code># Plot 2: Map with temperature-colored points
+m = folium.Map(location=[50, 10], zoom_start=4)
+
+# Add points
+for _, row in df.iterrows():
+    folium.CircleMarker(
+        location=[row['latitude'], row['longitude']],
+        radius=7,
+        color=None,
+        fill=True,
+        fill_opacity=0.7,
+        fill_color=temperature_to_hex(row['temperature']),
+        tooltip=f&quot;{row['date'].date()} - {row['temperature']}°C&quot;
+    ).add_to(m)
+
+# Display map
+m
+</code></pre>
+<p>You can download the full notebook <a href="../../code/CSV_Temp_Geo.ipynb" download>here</a>.</p>
+<p>You’ll find many more examples of plots in <a href="https://matplotlib.org/stable/plot_types/index">Matplotlib’s documentation</a>.</p>
 
       </article>
     </div>
