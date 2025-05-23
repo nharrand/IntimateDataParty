@@ -1,0 +1,51 @@
+{
+  "paths": [
+    {
+      "type": "file",
+      "value": "index.md"
+    },
+    {
+      "type": "dir",
+      "name": "Python",
+      "children": [
+        {
+          "type": "file",
+          "value": "Python/Python.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "R",
+      "children": [
+        {
+          "type": "file",
+          "value": "R/R.md"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    {
+      "path": "index.md",
+      "url": "index.html",
+      "content": "# Welcome to the Intimate Data Party\n\nThis small website should give very simple code snippets to get started with your data exploration and visualizations, in Python (with[Matplot lib](https://matplotlib.org)), in R (with tidyverse and [ggplot2](https://ggplot2.tidyverse.org/)) and JavaScript (with [Plotly JS](https://plotly.com/javascript/)).\n\n## Activities for tonight's event\n\n### Phase I: Data exploration\n\n * Choose a product or service and consider the data they collect. It can be something you already use, are interested in, or have stopped using.\n * What type(s) of data do they collect? How often?\n * Which person is the data associated with? Think broadly about people who could be directly or indirectly captured in the data.\n * What information could be inferred from the data? About whom?\n * What other actors could be interested in this data? Why?\n * What data is \"essential\" for the product or service to function, and what is not?\n\n\n### Phase II: Design (Pick one of the following briefs)\n\n 1. Imagine you’re redesigning the product or service so it doesn’t collect unnecessary data. What would that look like?\n 2. Design an alternative data representation (e.g. data visualization, physicalization, sonification) that incorporates important information that the product or service fails to capture from the data it collects.\n 3. Design a dystopic application that exploits the data from all the other people captured by the data. What could it do?\n 4. Design a product or service re-identifies people from their data. What could you infer about them?\n\n\n\n",
+      "html": "<h1 id=\"welcome-to-the-intimate-data-party\">Welcome to the Intimate Data Party <a class=\"heading-anchor-permalink\" href=\"#welcome-to-the-intimate-data-party\">#</a></h1>\n<p>This small website should give very simple code snippets to get started with your data exploration and visualizations, in Python (with<a href=\"https://matplotlib.org\">Matplot lib</a>), in R (with tidyverse and <a href=\"https://ggplot2.tidyverse.org/\">ggplot2</a>) and JavaScript (with <a href=\"https://plotly.com/javascript/\">Plotly JS</a>).</p>\n<h2 id=\"activities-for-tonight%E2%80%99s-event\">Activities for tonight’s event <a class=\"heading-anchor-permalink\" href=\"#activities-for-tonight%E2%80%99s-event\">#</a></h2>\n<h3 id=\"phase-i%3A-data-exploration\">Phase I: Data exploration <a class=\"heading-anchor-permalink\" href=\"#phase-i%3A-data-exploration\">#</a></h3>\n<ul>\n<li>Choose a product or service and consider the data they collect. It can be something you already use, are interested in, or have stopped using.</li>\n<li>What type(s) of data do they collect? How often?</li>\n<li>Which person is the data associated with? Think broadly about people who could be directly or indirectly captured in the data.</li>\n<li>What information could be inferred from the data? About whom?</li>\n<li>What other actors could be interested in this data? Why?</li>\n<li>What data is “essential” for the product or service to function, and what is not?</li>\n</ul>\n<h3 id=\"phase-ii%3A-design-(pick-one-of-the-following-briefs)\">Phase II: Design (Pick one of the following briefs) <a class=\"heading-anchor-permalink\" href=\"#phase-ii%3A-design-(pick-one-of-the-following-briefs)\">#</a></h3>\n<ol>\n<li>Imagine you’re redesigning the product or service so it doesn’t collect unnecessary data. What would that look like?</li>\n<li>Design an alternative data representation (e.g. data visualization, physicalization, sonification) that incorporates important information that the product or service fails to capture from the data it collects.</li>\n<li>Design a dystopic application that exploits the data from all the other people captured by the data. What could it do?</li>\n<li>Design a product or service re-identifies people from their data. What could you infer about them?</li>\n</ol>\n",
+      "id": 0
+    },
+    {
+      "path": "Python/Python.md",
+      "url": "Python/Python.html",
+      "content": "# Getting started with Python and Matplotlib\n\nThis guide helps beginners quickly set up Python, Jupyter Notebook, and Matplotlib for simple data visualization tasks.\n\n## Install Python and an environment\n\n\nDownload and Install Python: https://www.python.org/downloads/\n\nWhile installing Python, don't forget to install pip as well. Pip is the tool to download and install python libraries. You will need it.\n\nTo check that everything went right, open a terminal and type:\n\n```\npython --version \n```\n\nIf the install was successful, this should print the version of python you just installed.\n\nYou can now install Jupyter, a python notebook that will allow you to quickly work with your data.\n\n```\npip install jupyterlab\n```\n\nYou should also install Matplotlib and Pandas (two libraries we'll be using).\n\n```\npip install pandas matplotlib\n```\n\nTo start Jupyter, simply run:\n\n```\njupyter lab\n```\n\nThis command will give you a link to your local instance of jupyter. (This should look like a url starting with 'https://localhost'.)\n\n\n## Loading your data\n\nCheck [this notebook as an example](../../code/CSV_Temp_Geo.ipynb).\n",
+      "html": "<h1 id=\"getting-started-with-python-and-matplotlib\">Getting started with Python and Matplotlib <a class=\"heading-anchor-permalink\" href=\"#getting-started-with-python-and-matplotlib\">#</a></h1>\n<p>This guide helps beginners quickly set up Python, Jupyter Notebook, and Matplotlib for simple data visualization tasks.</p>\n<h2 id=\"install-python-and-an-environment\">Install Python and an environment <a class=\"heading-anchor-permalink\" href=\"#install-python-and-an-environment\">#</a></h2>\n<p>Download and Install Python: <a href=\"https://www.python.org/downloads/\">https://www.python.org/downloads/</a></p>\n<p>While installing Python, don’t forget to install pip as well. Pip is the tool to download and install python libraries. You will need it.</p>\n<p>To check that everything went right, open a terminal and type:</p>\n<pre><code>python --version \n</code></pre>\n<p>If the install was successful, this should print the version of python you just installed.</p>\n<p>You can now install Jupyter, a python notebook that will allow you to quickly work with your data.</p>\n<pre><code>pip install jupyterlab\n</code></pre>\n<p>You should also install Matplotlib and Pandas (two libraries we’ll be using).</p>\n<pre><code>pip install pandas matplotlib\n</code></pre>\n<p>To start Jupyter, simply run:</p>\n<pre><code>jupyter lab\n</code></pre>\n<p>This command will give you a link to your local instance of jupyter. (This should look like a url starting with ‘<a href=\"https://localhost\">https://localhost</a>’.)</p>\n<h2 id=\"loading-your-data\">Loading your data <a class=\"heading-anchor-permalink\" href=\"#loading-your-data\">#</a></h2>\n<p>Check <a href=\"../../code/CSV_Temp_Geo.ipynb\">this notebook as an example</a>.</p>\n",
+      "id": 1
+    },
+    {
+      "path": "R/R.md",
+      "url": "R/R.html",
+      "content": "# Getting started with R\n\n - Installing R: https://cran.rstudio.com/\n\n - Installing Rstudio: https://posit.co/download/rstudio-desktop/\n \n - Recommended install tidyverse (A collection of library for data analysis): \n        In Rstudio:\n        Tools > Install packages\n        Type \"tidyverse\"\n        Click \"install\"\n",
+      "html": "<h1 id=\"getting-started-with-r\">Getting started with R <a class=\"heading-anchor-permalink\" href=\"#getting-started-with-r\">#</a></h1>\n<ul>\n<li>\n<p>Installing R: <a href=\"https://cran.rstudio.com/\">https://cran.rstudio.com/</a></p>\n</li>\n<li>\n<p>Installing Rstudio: <a href=\"https://posit.co/download/rstudio-desktop/\">https://posit.co/download/rstudio-desktop/</a></p>\n</li>\n<li>\n<p>Recommended install tidyverse (A collection of library for data analysis):\nIn Rstudio:\nTools &gt; Install packages\nType “tidyverse”\nClick “install”</p>\n</li>\n</ul>\n",
+      "id": 2
+    }
+  ]
+}
