@@ -1,8 +1,10 @@
 # Welcome to the Intimate Data Party
 
-This small website should give very simple code snippets to get started with your data exploration and visualizations, in Python (with [Matplot lib](https://matplotlib.org)), in R (with tidyverse and [ggplot2](https://ggplot2.tidyverse.org/)) and JavaScript (with [Plotly JS](https://plotly.com/javascript/)).
+This small website should give very simple code snippets to get started with your data exploration and visualizations, in Python (with [Matplot lib](https://matplotlib.org)), in R (with Tidyverse and [ggplot2](https://ggplot2.tidyverse.org/)) and JavaScript (with [Plotly JS](https://plotly.com/javascript/)).
 
-Each of these libraries provide excellent data visualization capabilities. The point of this documentation is not to replace th
+Each of these libraries provide excellent data visualization capabilities. The point of this documentation is not to replace their own documentation bu rather give you a short example to get you started with your data exploration.
+
+In the section "MORE EXAMPLES", you'll find R and Python notebooks with sample datasets.
 
 ## Activities for tonight's event
 
