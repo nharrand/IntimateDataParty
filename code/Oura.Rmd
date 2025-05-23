@@ -1,0 +1,38 @@
+---
+title: "Oura"
+output: html_notebook
+---
+
+
+
+```{r}
+library(tidyverse)
+```
+
+
+
+```{r}
+data <- read_csv("../samples/oura.csv", na = c("None", ""))
+```
+
+
+```{r}
+# Calculate mean and confidence intervals
+score_summary <- data %>% 
+  pivot_longer(cols = c(`Restfulness Score`,`Readiness Score`,`Sleep Timin Score`,`Sleep Efficiency Score`,`Sleep Score`,`Activity Balance Score`,`Training Volume Score`,`Move Every Hour Score`,`Stay Active Score`,`Meet Daily Targets Score`,`Temperature Score`,`Total Sleep Score`,`Previous Day Activity Score`,`Resting Heart Rate Score`,`Training Frequency Score`,`Sleep Latency Score`,`Sleep Balance Score`,`Activity Score`,`HRV Balance Score`,`Previous Night Score`,`Recovery Index Score`,`Deep Sleep Score`), names_to = "Score_Type", values_to = "Score") %>%
+  group_by(Score_Type) %>%
+  summarize(
+    mean_score = mean(Score, na.rm = TRUE),
+    ci = qt(0.975, df = n()-1) * sd(Score, na.rm = TRUE) / sqrt(n())
+  )
+
+# Plot averages with error bars
+ggplot(score_summary, aes(x = Score_Type, y = mean_score)) +
+  geom_col(fill = "lightblue") +
+  geom_errorbar(aes(ymin = mean_score - ci, ymax = mean_score + ci), width = 0.2) +
+  labs(title = "Average Scores with 95% Confidence Intervals",
+       x = "Score Type",
+       y = "Average Score") +
+  theme_minimal() +
+  coord_flip()
+```
