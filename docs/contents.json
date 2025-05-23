@@ -29,6 +29,10 @@
         {
           "type": "file",
           "value": "More_Examples/Python.md"
+        },
+        {
+          "type": "file",
+          "value": "More_Examples/R.md"
         }
       ]
     }
@@ -68,6 +72,13 @@
       "content": "# More Python examples with Jupyter\n\nNatural Cycles: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/NaturalCycle.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/NaturalCycle.ipynb\" download>notebook</a>.\n\nOura: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/oura.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Oura.ipynb\" download>notebook</a>.\n\nCalendar: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/FemTech_and_Feminist_Tech_Calendar.ics\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Calendar.ipynb\" download>notebook</a>.\n\n",
       "html": "<h1 id=\"more-python-examples-with-jupyter\">More Python examples with Jupyter <a class=\"heading-anchor-permalink\" href=\"#more-python-examples-with-jupyter\">#</a></h1>\n<p>Natural Cycles: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/NaturalCycle.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/NaturalCycle.ipynb\" download>notebook</a>.</p>\n<p>Oura: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/oura.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Oura.ipynb\" download>notebook</a>.</p>\n<p>Calendar: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/FemTech_and_Feminist_Tech_Calendar.ics\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Calendar.ipynb\" download>notebook</a>.</p>\n",
       "id": 4
+    },
+    {
+      "path": "More_Examples/R.md",
+      "url": "More_Examples/R.html",
+      "content": "# More R examples\n\nNatural Cycles: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/NaturalCycle.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/NaturalCycles.Rmd\" download>notebook</a>.\n\nOura: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/oura.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Oura.Rmd\" download>notebook</a>.\n\nCalendar: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/FemTech_and_Feminist_Tech_Calendar.ics\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Calendar.Rmd\" download>notebook</a>.\n",
+      "html": "<h1 id=\"more-r-examples\">More R examples <a class=\"heading-anchor-permalink\" href=\"#more-r-examples\">#</a></h1>\n<p>Natural Cycles: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/NaturalCycle.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/NaturalCycles.Rmd\" download>notebook</a>.</p>\n<p>Oura: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/oura.csv\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Oura.Rmd\" download>notebook</a>.</p>\n<p>Calendar: <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/FemTech_and_Feminist_Tech_Calendar.ics\" download>dataset sample</a>, <a href=\"https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/Calendar.Rmd\" download>notebook</a>.</p>\n",
+      "id": 5
     }
   ]
 }
