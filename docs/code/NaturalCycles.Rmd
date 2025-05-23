@@ -1,0 +1,28 @@
+---
+title: "Natural cycles"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+
+
+```{r}
+data <- read_csv("../samples/NaturalCycle.csv") %>% mutate(Date = as.Date(Date))
+```
+
+
+```{r}
+ggplot(data, aes(x = Date, y = Temperature)) +
+  geom_line(color = "blue") +
+  geom_rect(data = data %>% filter(Menstruation == "MENSTRUATION"),
+            aes(xmin = Date - 0.5, xmax = Date + 0.5, ymin = -Inf, ymax = Inf),
+            fill = "red", alpha = 0.2, inherit.aes = FALSE) +
+  labs(title = "Temperature Over Time with Menstruation Highlight",
+       x = "Date",
+       y = "Temperature") +
+  theme_minimal()
+```

@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(calendar)
+```
+
+
+
+```{r}
+data <- ic_read("../samples/FemTech_and_Feminist_Tech_Calendar.ics")
+```
+```{r}
+
+# Extract event start times and count events per day
+event_counts <- data %>%
+  filter(!is.na(DTSTART)) %>%
+  mutate(date = as.Date(DTSTART)) %>%
+  count(date)
+
+# Plot the number of events per day
+ggplot(event_counts, aes(x = date, y = n)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "Number of Calendar Events per Day",
+       x = "Date",
+       y = "Number of Events") +
+  theme_minimal()
+
+```

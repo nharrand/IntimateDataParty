@@ -1,0 +1,42 @@
+---
+title: "Temperatures, Dates, Locations"
+output: html_notebook
+---
+
+```{r}
+install.packages("tidyverse")
+install.packages("mapview")
+install.packages("sf")
+```
+
+```{r}
+library(tidyverse)
+library(sf)
+library(mapview)
+```
+
+```{r}
+data <- read_csv("../samples/temperature_readings.csv")
+```
+
+```{r}
+head(data)
+```
+```{r}
+data %>%
+  mutate(date = as.Date(date)) %>%  # Convert date column to date type
+  ggplot(aes(x = date, y = temperature)) +
+  geom_line(color = "blue") +
+  labs(title = "Temperature Over Time",
+       x = "Date",
+       y = "Temperature") +
+  theme_minimal()
+```
+
+
+```{r}
+mapview(data, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+
+
+```
+
