@@ -17,7 +17,7 @@ Install tidyverse (A collection of libraries for data analysis):
 
 ## Create a Notebook
 
-In the rest of this tutorial, we are going to develop a very simple example to illustrate how to work with a simple dataset. You can find this toy dataset <a href="samples/temperature_readings.csv" download>here</a>.
+In the rest of this tutorial, we are going to develop a very simple example to illustrate how to work with a simple dataset. You can find this toy dataset <a href="../samples/temperature_readings.csv" download>here</a>.
 
 This csv file contains temperature recordings with date and location data.
 
@@ -76,6 +76,6 @@ mapview(data, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
 
 
 
-You can download the full notebook <a href="code/CSV_Temp_Geo.Rmb" download>here</a>.
+You can download the full notebook <a href="../code/CSV_Temp_Geo.Rmb" download>here</a>.
 
 You'll find many more examples of plots in [Ggplot2's documentation](https://r4ds.had.co.nz/data-visualisation.html).

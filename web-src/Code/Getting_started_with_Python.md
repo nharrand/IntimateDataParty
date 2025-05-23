@@ -40,7 +40,7 @@ This command will give you a link to your local instance of Jupyter. (This shoul
 
 ## Loading your data
 
-In the rest of this tutorial, we are going to develop a very simple example to illustrate how to work with a simple dataset. You can find this toy dataset <a href="https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/samples/temperature_readings.csv" download>here</a>.
+In the rest of this tutorial, we are going to develop a very simple example to illustrate how to work with a simple dataset. You can find this toy dataset <a href="../samples/temperature_readings.csv" download>here</a>.
 
 This csv file contains temperature recordings with date and location data.
 
@@ -126,6 +126,6 @@ m
 
 
 
-You can download the full notebook <a href="https://raw.githubusercontent.com/nharrand/IntimateDataParty/refs/heads/main/code/CSV_Temp_Geo.ipynb" download>here</a>.
+You can download the full notebook <a href="../code/CSV_Temp_Geo.ipynb" download>here</a>.
 
 You'll find many more examples of plots in [Matplotlib's documentation](https://matplotlib.org/stable/plot_types/index).
