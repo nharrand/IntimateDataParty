@@ -486,12 +486,46 @@
 <p>Download and install R: <a href="https://cran.rstudio.com/">https://cran.rstudio.com/</a></p>
 <p>Download and install Rstudio: <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a></p>
 <p>Install tidyverse (A collection of libraries for data analysis):</p>
-<pre><code>   In Rstudio:
-   Tools &gt; Install packages
-   Type &quot;tidyverse&quot;
-   Click &quot;install&quot;
+<ul>
+<li>In Rstudio: ‘Tools’ &gt; ‘Install packages’</li>
+<li>Type “tidyverse”</li>
+<li>Click “install”</li>
+</ul>
+<h2 id="create-a-notebook">Create a Notebook <a class="heading-anchor-permalink" href="#create-a-notebook">#</a></h2>
+<p>In the rest of this tutorial, we are going to develop a very simple example to illustrate how to work with a simple dataset. You can find this toy dataset <a href="samples/temperature_readings.csv" download>here</a>.</p>
+<p>This csv file contains temperature recordings with date and location data.</p>
+<p>First create a code block that import the libraries you want to work with:</p>
+<pre><code class="language-{r}">library(tidyverse)
 </code></pre>
-<h2 id="a-simple-notebook">A simple notebook <a class="heading-anchor-permalink" href="#a-simple-notebook">#</a></h2>
+<p>Then create a code block that loads your data. (You need to change the path to correspond to your csv file’s path.)</p>
+<pre><code class="language-{r}">data &lt;- read_csv(&quot;../samples/temperature_readings.csv&quot;)
+</code></pre>
+<p>To check your dataframe, you can simply create the following block:</p>
+<pre><code class="language-{r}">head(data)
+</code></pre>
+<h2 id="plotting-temperature-over-time">Plotting temperature over time <a class="heading-anchor-permalink" href="#plotting-temperature-over-time">#</a></h2>
+<p>To plot the evolution of temperature over time, you can run the following code block:</p>
+<pre><code class="language-{r}">data %&gt;%
+  mutate(date = as.Date(date)) %&gt;%  # Convert date column to date type
+  ggplot(aes(x = date, y = temperature)) +
+  geom_line(color = &quot;blue&quot;) +
+  labs(title = &quot;Temperature Over Time&quot;,
+       x = &quot;Date&quot;,
+       y = &quot;Temperature&quot;) +
+  theme_minimal()
+</code></pre>
+<h2 id="plotting-locations">Plotting locations <a class="heading-anchor-permalink" href="#plotting-locations">#</a></h2>
+<p>To display your datapoints on a map you can run the following:</p>
+<pre><code class="language-{r}">install.packages(&quot;mapview&quot;)
+install.packages(&quot;sf&quot;)
+</code></pre>
+<pre><code class="language-{r}">library(sf)
+library(mapview)
+</code></pre>
+<pre><code class="language-{r}">mapview(data, xcol = &quot;longitude&quot;, ycol = &quot;latitude&quot;, crs = 4269, grid = FALSE)
+</code></pre>
+<p>You can download the full notebook <a href="code/CSV_Temp_Geo.Rmb" download>here</a>.</p>
+<p>You’ll find many more examples of plots in <a href="https://r4ds.had.co.nz/data-visualisation.html">Ggplot2’s documentation</a>.</p>
 
       </article>
     </div>

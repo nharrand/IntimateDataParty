@@ -69,7 +69,7 @@ To check your dataframe, you can simply create the following block:
 df
 ```
 
-If you run all your block, Jupyter should print a table containing your data.
+If you run all your blocks, Jupyter should print a table containing your data.
 
 
 ## Plotting temperature over time
